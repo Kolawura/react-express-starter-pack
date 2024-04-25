@@ -14,6 +14,7 @@ app.get('/api/customers', (_req, res)=>{
         {id: 3, firstName: "Steve", lastName: "Johnson"}
     ]
     res.json(customers);
+    console.log(customers)
 });
 
 
