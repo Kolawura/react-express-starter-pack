@@ -5,14 +5,12 @@ import "./Customers.css"
 function Customers() {
   const [customers, setCustormers] = useState([]);
   useEffect(() => {
-    fetch('/api/customers')
+    fetch('http://localhost:5000/api/customers')
       .then((res) => res.json())
       .then((customers) => {
-        console.log(customers)
         setCustormers(customers)});
     return () => {};
   }, []);
-  console.log(customers)
   return (
     <div>
       <h2>Customers</h2>
